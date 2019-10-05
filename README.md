@@ -1,4 +1,4 @@
-#Machine Learning Research
+# Machine Learning Research
 Character recognition task: classification of handwritten numerals
 
 
