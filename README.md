@@ -1,9 +1,9 @@
-Machine Learning Research
+#Machine Learning Research
 Character recognition task: classification of handwritten numerals
 
 
 Problem Setting:
-The inputs that make up this figure are inputs for each Network based on the number of input pixels (256 = 16x16 for Net-1). There are 10 outputs in this model for each of the digits classes from an image (class k, for k = 0,1,2,....,9). The desired function to learn is the predicted value fˆk(x) .
+The inputs that make up this figure are inputs for each Network based on the number of input pixels (256 = 16x16 for Net-1). There are 10 outputs in this model for each of the digits classes from an image (class k, for k = 0,1,2,....,9). The desired function to learn is the predicted value fˆk(x).
 
 Data Sources:
 The U.S. Postal service uses images that are scanned, resulting in 16x16 greyscale images that need to be classified. With each network, there are misclassification rates around 4.5%. This is the real problem that this figure solves. This graph represents the correctness of test data, over the number of training iterations. There were five different networks that were examined. The first network overfits very quick, where as the second network overfits slightly over the course of the iterations. Net-5 shows the best classification results, based on the highest percent of correct data. I plan to get this data from the Elements of Statistical Learning website (https://web.stanford.edu/~hastie/ElemStatLearn/). There are 7291 training observations(X inputs) and 2007 test observations(Y outputs). Each of these data sets are split into rows/lines. 7291 rows in the training data and 2007 rows in the testing data.
