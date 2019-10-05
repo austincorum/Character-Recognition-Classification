@@ -30,8 +30,11 @@ print(test_data.shape)
 for i in range(0,9):
     # Look through data rows for images
     train_rows = train_array[i][1:]
+    # Returns a matrix from an array-like object
     elements = np.matrix(train_rows)
+    # Read the elements using this index order
     elements = elements.reshape(16,16)
+
     plt.figure(figsize=(10,10))
     plt.subplot(3,3,i+1)
     plt.imshow(elements)
