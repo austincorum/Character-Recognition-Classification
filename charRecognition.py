@@ -12,7 +12,7 @@ train_array = np.loadtxt("/Users/austincorum/Documents/GitHub/CS599_P1/zip.train
         # For abtracting the data into rows and columns
 train_data = pd.DataFrame(train_array)
 
-    # view the data shape
+    # View the data shape
 print(train_data.shape)
     # output is (7291, 257)
 
@@ -25,7 +25,6 @@ test_data = pd.DataFrame(test_array)
 print(test_data.shape)
     # Output is (2007, 257)
 
-
 # TRAINING DATA classified from 0 to 9
 for i in range(0,9):
     # Look through data rows for images
@@ -34,9 +33,11 @@ for i in range(0,9):
     elements = np.matrix(train_rows)
     # Read the elements using this index order
     elements = elements.reshape(16,16)
-
+    # Creates new figure width and height
     plt.figure(figsize=(10,10))
+    # Creates a figure and a grid of subplots
     plt.subplot(3,3,i+1)
+    # An image with scalar data visualized using a colormap
     plt.imshow(elements)
     # To view each image in matplotlib
     plt.show()
