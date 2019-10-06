@@ -1,0 +1,2 @@
+# makefile
+python charRecognition.py
