@@ -10,3 +10,5 @@ The U.S. Postal service uses images that are scanned, resulting in 16x16 greysca
 
 Algorithm(Baselines):
 I’m going to have a for loop through every network, every row in the training iterations, and every row in the data for the correctness(%) of the test data. Each network will be plotted, one by one. The predicted values for each network will be calculated, then plotted. If I chose this figure, I will learn how to create a neural network for character recognition. I plan on using PyTorch or TensorFlow for this project, as this is what I am most familiar with, the Python language. I should be able to find packages for these within the python regression package that will allow me to utilize the predicted value function.
+
+![figure][https://github.com/akc257/Character-recognition-task-classification-of-handwritten-numerals/blob/master/figure.png]
