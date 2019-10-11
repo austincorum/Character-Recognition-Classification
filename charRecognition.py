@@ -12,6 +12,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+# currently importing test data from external source to understand the process
 
 _URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
 
