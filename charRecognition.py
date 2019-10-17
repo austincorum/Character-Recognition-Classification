@@ -54,6 +54,7 @@ print("\n\n--------------- MY DATA -----------------------\n")
 # Load training data
 train_array = np.loadtxt("/Users/austincorum/Documents/GitHub/CS599_P1/zip.train")
 train_levels = train_array[0:1000][0]
+print(train_levels)
 train_features = train_array[0:1000][1:257]
 
     # Change from array to a data frame for 2-dimmentional data structure
@@ -73,24 +74,6 @@ test_data = pd.DataFrame(test_array)
 print(test_data.shape)
     # Output is (2007, 257)
 
-# visualize data
-# TRAINING DATA classified from 0 to 9
-for i in range(0,9):
-    # Look through data rows for images
-    train_rows = train_array[i][1:]
-    # Returns a matrix from an array-like object
-    elements = np.matrix(train_rows)
-    # Read the elements using this index order
-    elements = elements.reshape(16,16)
-    # Creates new figure width and height
-    plt.figure(figsize=(10,10))
-    # Creates a figure and a grid of subplots
-    plt.subplot(3,3,i+1)
-    # An image with scalar data visualized using a colormap
-    plt.imshow(elements)
-    # To view each image in matplotlib
-    #plt.show()
-        # Exit for loop
 
 batch_size = 128
 # figure had 30 training epochs
@@ -98,34 +81,6 @@ epochs = 30
 # 16 x 16 greyscale images
 IMG_HEIGHT = 16
 IMG_WIDTH = 16
-
-# train_image_generator = ImageDataGenerator(rescale=1./255) # Generator for our training data
-# validation_image_generator = ImageDataGenerator(rescale=1./255) # Generator for our validation data
-#
-# train_data_gen = train_image_generator.flow_from_directory(batch_size=batch_size,
-#                                                            directory=train_dir,
-#                                                            shuffle=True,
-#                                                            target_size=(IMG_HEIGHT, IMG_WIDTH),
-#                                                            class_mode='binary')
-#
-# val_data_gen = validation_image_generator.flow_from_directory(batch_size=batch_size,
-#                                                               directory=validation_dir,
-#                                                               target_size=(IMG_HEIGHT, IMG_WIDTH),
-#                                                               class_mode='binary')
-#
-# sample_training_images, _ = next(train_data_gen)
-#
-# # This function will plot images in the form of a grid with 1 row and 5 columns where images are placed in each column.
-# def plotImages(images_arr):
-#     fig, axes = plt.subplots(1, 5, figsize=(20,20))
-#     axes = axes.flatten()
-#     for img, ax in zip( images_arr, axes):
-#         ax.imshow(img)
-#         ax.axis('off')
-#     plt.tight_layout()
-#     # plt.show()
-
-# plotImages(sample_training_images[:5])
 
 model = Sequential([
     Conv2D(16, 3, padding='same', activation='relu', input_shape=(IMG_HEIGHT, IMG_WIDTH ,3)),
