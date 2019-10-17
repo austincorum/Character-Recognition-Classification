@@ -2,9 +2,9 @@
 Character recognition task: classification of handwritten numerals
 
 # Dependencies
-Must have Python 2.6 installed
-Run "pip install -r make.txt" in command line or terminal
-To reproduce the figure, run "charRecognition.py" in command line or terminal
+- Must have Python 2.6 installed.
+- Run "pip install -r make.txt" in command line or terminal.
+- To reproduce the figure, run "charRecognition.py" in command line or terminal.
 
 
 # Problem Setting:
