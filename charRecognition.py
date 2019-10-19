@@ -7,6 +7,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Conv2D, Flatten, LocallyConnected2D
 from tensorflow.keras.utils import to_categorical
 
+import pandas as pd
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -16,7 +17,8 @@ import os
 
 def main():
     os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-    ###################### LOADING DATA INTO ARAYS #############################
+    ###################### LOADING DATA #############################
+    print("\n--------------- MY DATA -----------------------\n")
         # Load training data into an array
     train_array = np.loadtxt("/Users/austincorum/Documents/GitHub/CS599_P1/zip.train")
         # extracting the levels from the training array
@@ -105,7 +107,7 @@ def net_one(train_levels, train_features, test_levels, test_features, num_epochs
             Dense(10, input_dim=256, activation='sigmoid')
     ])
         # sum of squared error loss
-    model_one.compile(optimizer='sgd',
+    model_one.compile(optimizer='adam',
                   loss=tf.losses.MeanSquaredError(),
                   metrics=['accuracy'])
 
