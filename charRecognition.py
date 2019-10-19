@@ -101,7 +101,8 @@ def main():
 # net-1 function
     # takes in train and test features/levels, as well as num_epochs and the batch size
 def net_one(train_levels, train_features, test_levels, test_features, num_epochs, batch_size):
-    total_accuracy = []
+        # total percentage of correct test data
+    total_correct = []
         # Net-1 Archetecture
     model_one = Sequential([
             Dense(10, input_dim=256, activation='sigmoid')
@@ -131,8 +132,8 @@ def net_one(train_levels, train_features, test_levels, test_features, num_epochs
             else:
                 pass
         accuracy = 100 * (correct_predictions/num_predictions)
-        total_accuracy.append(accuracy)
-    return total_accuracy
+        total_correct.append(accuracy)
+    return total_correct
 
 if __name__ == '__main__':
     main()
