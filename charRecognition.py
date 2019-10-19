@@ -124,12 +124,13 @@ def net_one(train_levels, train_features, test_levels, test_features, num_epochs
         print('test loss, test acc:', loss, " ", accuracy)
         predicted_classes = model_one.predict_classes(test_features)
         correct_predictions = 0
+        num_predictions = len(predicted_classes)
         for x in range(len(predicted_classes)):
             if predicted_classes[x] == test_levels[x]:
                 correct_predictions += 1
             else:
                 pass
-        accuracy = 100 * (correct_predictions/len(predicted_classes))
+        accuracy = 100 * (correct_predictions/num_predictions)
         total_accuracy.append(accuracy)
     return total_accuracy
 
