@@ -20,7 +20,7 @@ def main():
     ###################### LOADING DATA #############################
     print("\n--------------- MY DATA -----------------------\n")
         # Load training data into an array
-    train_array = np.loadtxt("/Users/austincorum/Documents/GitHub/CS599_P1/zip.train")
+    train_array = np.loadtxt("zip.train")
         # extracting the levels from the training array
     train_levels_data = train_array[0:7291, 0:1]
         # convert the class vector to binary class matrix
@@ -32,7 +32,7 @@ def main():
     total_train = len(train_features)
 
         # Load testing data into an array
-    test_array = np.loadtxt("/Users/austincorum/Documents/GitHub/CS599_P1/zip.test")
+    test_array = np.loadtxt("zip.test")
         # extract test levels from test_array, for a sample of data
     test_levels = test_array[0:2007, 0:1]
         # extract teat features from test_array, for a sample of data
